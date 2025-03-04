@@ -19,7 +19,7 @@ const prepareListOfMovies = (movieList, query) => {
 };
 
 export const App = () => {
-  const [query, setQuerry] = useState('');
+  const [query, setQuery] = useState('');
   const visibleMovies = prepareListOfMovies(moviesFromServer, query);
 
   return (
@@ -39,7 +39,7 @@ export const App = () => {
                 className="input"
                 placeholder="Type search word"
                 onChange={event => {
-                  setQuerry(event.target.value.toLowerCase().trim());
+                  setQuery(event.target.value.toLowerCase().trim());
                 }}
               />
             </div>
